@@ -3,10 +3,12 @@
 
 {%block content%}
     <div class="formCont login-cont">
+        <p id="welcome">Welcome to Climathon</p> 
+        <hr id="break">
         <form id="loginForm" method="post" onsubmit="handleAuht()">
             {%csrf_token%}
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
     </div>
