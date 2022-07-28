@@ -1,0 +1,23 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{%static 'css/index.css'%}">
+    <script src="https://kit.fontawesome.com/c676ebde69.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="flash"></div>
+    {%block content%}
+
+    {%endblock%}
+</body>
+<script src="{%static 'js/App.js'%}"></script>
+<script src="{%static 'js/index.js'%}"></script>
+<footer>
+    
+</footer>
+</html>
