@@ -23,7 +23,52 @@
     {%endblock%}
 </body>
 <script src="{%static 'js/App.js'%}"></script>
-<script src="{%static 'js/index.js'%}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const createLineChart= ()=>{
+    let lineChart= document.querySelector('.line')
+    const data = {
+        labels: ['january', 'february','march', 'april'],
+        datasets: [{
+          label: 'Some Data',
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgb(255, 99, 132)',
+          data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+      };
+    
+      const config = {
+        type: 'line',
+        data: data,
+        options: {}
+      };
+    
+    let chart = new Chart(lineChart, config)
+}
+
+const createPieChar= ()=>{
+    let pieChart= document.querySelector('.pieChart')
+    const data = {
+        labels: ['january', 'february','march', 'april'],
+        datasets: [{
+          label: 'Some Data',
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgb(255, 99, 132)',
+          data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+      };
+    
+      const config = {
+        type: 'pie',
+        data: data,
+        options: {}
+      };
+    
+    let chart = new Chart(pieChart, config)
+}
+createLineChart()
+createPieChar()
+</script>
 <footer>
     
 </footer>

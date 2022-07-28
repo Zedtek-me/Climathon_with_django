@@ -9,6 +9,11 @@ body{
     width: 100%;
     height: 100%;
 }
+.flash{
+    display:none;
+    text-align: center;
+    color: white;
+}
 /* header, ul#largeNav{
     width: 100%;
 }
@@ -43,7 +48,7 @@ ul#largeNav{
 .sideBarParent{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     align-self: flex-start;
     padding: inherit;
@@ -56,21 +61,43 @@ ul#largeNav{
     color: white;
     width: 20%;
     height: 100%;
+    z-index: 100;
 }
 
-.sideCont{
+.sideCont{/*child containers in sideBarParent*/
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
+    align-self: center;
 }
 
 .icon{
     align-self: center !important; 
 }
-
+/* container--> counterpart of sidebar where other things including analytics go*/
+.container{
+    width:80%;
+}
 .cont.topNav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.cont, .cont.topNav{
+    border:solid 1px black;
+    width: 100%;
+    transform: translateX(12%);
+    height: 50%;
+    margin: 5px;
+}
+.cont.trends-and-number{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 4px;
+}
+.trends-and-number >*{
+    margin: 5%;
 }

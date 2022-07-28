@@ -4,15 +4,15 @@ const path= require('path')
 
 module.exports= {
     mode: "production",
-    entry: path(__dirname, 'climathonApp/static/js/index.js'),
+    entry: path.resolve(__dirname, 'climathonApp/static/js/index.js'),
     output: {
         filename: 'bundled.js',
-        path: path(__dirname, 'climathonApp/static/js/dist'),
+        path: path.resolve(__dirname, 'climathonApp/static/js/dist'),
     },
     module:{
-        rules:{
+        rules:[{
             test: /\.js$/,
             use: "babel-loader"
-        }
+        }]
     }
 }
