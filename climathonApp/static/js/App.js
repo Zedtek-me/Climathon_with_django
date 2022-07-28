@@ -53,3 +53,24 @@ const handleAUth= async (e)=>{
         }
     }
 }
+
+
+const fetchGridData= async(url)=>{
+    document.querySelector('.enterPrise-stat')
+    let resp= await fetch(url)
+    let data = await resp.json()
+    data.map((grid)=>{
+        let enterPrices= document.createElement('DIV')
+        let par= document.createElement('P')
+        let img= document.createElement('IMG')
+        // set some attributes on them
+        enterPrices.className= 'card'
+        par.id= 'gridInfo'
+        img.id= 'enterPImg'
+        // add their data
+        par.textContent= grid.location
+        img.src= grid.image
+        enterPrices.appendChild(img)
+        enterPrices.appendChild(par)
+    })
+}
