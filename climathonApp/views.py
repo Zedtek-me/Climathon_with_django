@@ -5,7 +5,7 @@ def render_login(request):
     return render(request, 'login.html', {})
 
 def render_signup(request):
-    return render(request, 'signup.html', {})
+    return render(request, 'register.html', {})
 
 def render_dashboard(request):
     # if request.method == 'POST' and request.headers.get('user_logged_in'):# this gets the initial request that sends user login status through post, and the redirect as dimmed fit.
