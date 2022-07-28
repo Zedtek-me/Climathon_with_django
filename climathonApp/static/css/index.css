@@ -73,12 +73,23 @@ ul#largeNav{
     text-align: center;
     margin: 10%;
     width: 50%;
+    cursor: pointer;
 }
 
 .icon{
     align-self: center !important; 
-    width: 30% !important;
-    height: 30% !important;
+    width: 80% !important;
+    height: 80% !important;
+    transition: all 0.3s ease;
+}
+
+#infoMainTxt{
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.icon:hover, #infoMainTxt:hover{
+    font-weight: 700;
 }
 /* container--> counterpart of sidebar where other things including analytics go*/
 .container{
@@ -132,6 +143,16 @@ ul#largeNav{
     justify-content: space-between;
     align-items: center;
     margin: 8px;
+}
+
+#compLogo{/*found within company details*/
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+}
+
+#companyType{
+    font-size: 15px;
 }
 .btns>*{
     margin: 8px;
