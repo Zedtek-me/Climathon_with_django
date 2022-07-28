@@ -26,78 +26,89 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     const createLineChart= ()=>{
-    let lineChart= document.querySelector('.line')
-    const data = {
+        let lineChart= document.querySelector('.line')
+        let firstData = {//data representation for the first line chart
+            labels: ['january', 'february','march', 'april'],
+            datasets: [{
+                label: 'Some Data',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45],
+            }]
+        }
+    
+        var firstLineData = {//conf for the first data
+            label: "Car A - Speed (mph)",
+            data: firstData,
+            lineTension: 0,
+            fill: false,
+            borderColor: 'red'
+    };
+
+    // second data comes down below
+    secondData= {//data representation for the second line chart
         labels: ['january', 'february','march', 'april'],
         datasets: [{
-          label: 'Some Data',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: [0, 10, 5, 2, 20, 30, 45],
+            label: 'Some Data',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
         }]
-      };
-    
-    const config = {
-        type: 'line',
-        data: data,
-        options: {
-            responsive: true,
-            interaction: {
-            mode: 'index',
-            intersect: false,
-            },
-            stacked: false,
-            plugins: {
-            title: {
-                display: true,
-                text: 'Chart.js Line Chart - Multi Axis'
-            }
-            },
-            scales: {
-            y: {
-                type: 'linear',
-                display: true,
-                position: 'left',
-            },
-            y1: {
-                type: 'linear',
-                display: true,
-                position: 'right',
+        }
+    let secondLineData = {//conf for the second data
+        label: "For the second data",
+        data: secondData,
+        lineTension: 0,
+        fill: false,
+        borderColor: 'blue'
+    };
 
-                // grid line settings
-                grid: {
-                drawOnChartArea: false, // only want the grid lines for one axis to show up
-                },
-            },
-            }
-        },
-        };
+var bothData = {//wrapping both data into a single dataset
+  labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+  datasets: [firstLineData, secondLineData]
+};
+
+var chartOptions = {//styling configurations
+  legend: {
+    display: true,
+    position: 'top',
+    labels: {
+      boxWidth: 80,
+      fontColor: 'black'
+    }
+  }
+};
+
+    let lines = new Chart(lineChart, {//main output construction
+    type: 'line',
+    data: bothData,
+    options: chartOptions
+    })
             
-        let chart = new Chart(lineChart, config)
 }
 
-const createPieChar= ()=>{
-    let pieChart= document.querySelector('.pieChart')
-    const data = {
-        labels: ['january', 'february','march', 'april'],
-        datasets: [{
-          label: 'Some Data',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: [0, 10, 5, 2, 20, 30, 45],
-        }]
-      };
-    
-      const config = {
-        type: 'pie',
-        data: data,
-        options: {}
-      };
-    
-    let chart = new Chart(pieChart, config)
+    const createPieChar= ()=>{
+        let pieChart= document.querySelector('.pieChart')
+        const data = {
+            labels: ['january', 'february','march', 'april'],
+            datasets: [{
+            label: 'Some Data',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+            }]
+        };
+        
+        const config = {
+            type: 'pie',
+            data: data,
+            options: {}
+        };
+        
+        let chart = new Chart(pieChart, config)
 }
-createLineChart()
-createPieChar()
+    createLineChart()
+    createPieChar()
 </script>
 <footer>
     
