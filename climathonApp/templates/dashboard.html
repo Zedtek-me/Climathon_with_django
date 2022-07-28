@@ -1,4 +1,5 @@
 {%extends 'base.html'%}
+{%load static%}
 
 {%block title%}Dashboard{%endblock%}
 
@@ -36,25 +37,34 @@
             </div>
             <div id="right-panel">
                 <div class="img-n-name">
-                    <img src="" alt="user-img" id="user-img">
-                    <h5 id="name">Admin</h5>
+                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="user-img" id="user-img">
+                    <p id="name">Admin</p>
                 </div>
                 <div class="notif-n-msg">
                     <i class="fa-solid fa-bell"></i>
-                    <h5 id="name">Message</h5>
+                    <p id="name">Message</p>
                 </div>
                 <div class="logout">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <h5 id="name">Logout</h5>
+                    <p id="name">Logout</p>
                 </div>
             </div>
         </div>
 
         <div class="cont jointStockComp">
             <div class="companyProf-nd-info">
-                <img src="" alt="companyLogo" id="compLogo">
+                <img src="{%static 'img/internet_media_image.jpg'%}" alt="companyLogo" id="compLogo">
                 <div class="company-det">
-                    <h6 id="companyType">Ikeja Electric Limited</h6>
+                    <div class="compType-nd-stars">
+                        <h6 id="companyType">Ikeja Electric Limited</h6>
+                        <div class="stars">
+                            <i class="star fa-regular fa-star"></i>
+                            <i class="star fa-regular fa-star"></i>
+                            <i class="star fa-regular fa-star"></i>
+                            <i class="star fa-regular fa-star"></i>
+                            <i class="star fa-regular fa-star"></i>
+                        </div>
+                    </div>
                     <div class="btns">
                         <h6 id="member" class="round-radi">Member</h6>
                         <h6 id="non-certif" class="round-radi">Non-certified</h6>
@@ -63,12 +73,41 @@
                 </div>
             </div>
             <div class="viewDet">
-                <h6 id="view-details">View Details <i class="fa-regular fa-greater-than"></i></h6>
+                <h6 id="view-details">View Details </h6><i class="fa-regular fa-greater-than"></i>
             </div>
         </div>
 
-        <div class=" cont scores-total">
-            data
+        <div class=" cont grid-total">
+            <div class="gridInfo">
+                <div class="grid">
+                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="" id="gridImg">
+                    <div class="volumes">
+                        <h5 id="grid-volume">Total Volume <p id="unit">{pcs}</p></h5>
+                        <h1 id="volume-num">263,578</h1>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="" id="gridImg">
+                    <div class="volumes">
+                        <h5 id="grid-volume">Total Area <p id="unit">{pcs}</p></h5>
+                        <h1 id="volume-num">263,578</h1>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="" id="gridImg">
+                    <div class="volumes">
+                        <h5 id="grid-volume">Rental Services <p id="unit">{pcs}</p></h5>
+                        <h1 id="volume-num">263,578</h1>
+                    </div>
+                </div>
+                <div class="grid">
+                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="" id="gridImg">
+                    <div class="volumes">
+                        <h5 id="grid-volume">City Delievery Service <p id="unit">{pcs}</p></h5>
+                        <h1 id="volume-num">263,578</h1>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="cont trends-and-number">
