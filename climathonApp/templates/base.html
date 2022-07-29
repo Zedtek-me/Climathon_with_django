@@ -28,64 +28,71 @@
 <script>
     const createLineChart= ()=>{
         let lineChart= document.querySelector('.line')
-        let firstData = {//data representation for the first line chart
-            labels: ['january', 'february','march', 'april'],
-            datasets: [{
-                label: 'Some Data',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: [0, 10, 5, 2, 20, 30, 45],
-            }]
-        }
-    
-        var firstLineData = {//conf for the first data
-            label: "Car A - Speed (mph)",
-            data: firstData,
-            lineTension: 0,
-            fill: false,
-            borderColor: 'red'
-    };
+        // setups
+        const DATA_COUNT = 7;
+        const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
 
-    // second data comes down below
-    secondData= {//data representation for the second line chart
-        labels: ['january', 'february','march', 'april'],
-        datasets: [{
-            label: 'Some Data',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45],
-        }]
-        }
-    let secondLineData = {//conf for the second data
-        label: "For the second data",
-        data: secondData,
-        lineTension: 0,
-        fill: false,
-        borderColor: 'blue'
-    };
+        const labels = ['Ikeja', 'Abuja', 'EKEDC', 'EGBEDA', 'PHCN','PHASE 2', 'JOS ELECTRIC'];
+        const data = {
+        labels: labels,
+        datasets: [
+            {
+            label: 'Dataset 1',
+            data: [-10,400,-1000,-90000, 2000000, 10000000, -50],
+            borderColor: 'red',
+            backgroundColor: 'red',
+            yAxisID: 'y',
+            },
+            {
+            label: 'Dataset 2',
+            data: NUMBER_CFG,
+            borderColor: 'blue',
+            backgroundColor: 'blue',
+            yAxisID: 'y1',
+            }
+        ]
+        };
 
-var bothData = {//wrapping both data into a single dataset
-  labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
-  datasets: [firstLineData, secondLineData]
+        
+    // config
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+        responsive: true,
+        interaction: {
+        mode: 'index',
+        intersect: false,
+        },
+        stacked: false,
+        plugins: {
+        title: {
+            display: true,
+            text: 'Electric Voltages'
+        }
+        },
+        scales: {
+        y: {
+            type: 'linear',
+            display: true,
+            position: 'left',
+        },
+        y1: {
+            type: 'linear',
+            display: true,
+            position: 'right',
+
+            // grid line settings
+            grid: {
+            drawOnChartArea: false, // only want the grid lines for one axis to show up
+            },
+        },
+        }
+    },
 };
 
-var chartOptions = {//styling configurations
-  legend: {
-    display: true,
-    position: 'top',
-    labels: {
-      boxWidth: 80,
-      fontColor: 'black'
-    }
-  }
-};
-
-    let lines = new Chart(lineChart, {//main output construction
-    type: 'line',
-    data: bothData,
-    options: chartOptions
-    })
-            
+            let lines = new Chart(lineChart, config)
+                    
 }
 
     const createPieChar= ()=>{
@@ -93,9 +100,9 @@ var chartOptions = {//styling configurations
         const data = {
             labels: ['january', 'february','march', 'april'],
             datasets: [{
-            label: 'Some Data',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            label: 'Test Data',
+            backgroundColor: 'white',
+            borderColor: 'green',
             data: [0, 10, 5, 2, 20, 30, 45],
             }]
         };
