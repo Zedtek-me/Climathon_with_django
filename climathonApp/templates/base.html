@@ -38,7 +38,7 @@
         datasets: [
             {
             label: 'Dataset 1',
-            data: [-10,400,-1000,-90000, 2000000, 10000000, -50],
+            data: NUMBER_CFG,
             borderColor: 'red',
             backgroundColor: 'red',
             yAxisID: 'y',
@@ -91,19 +91,19 @@
     },
 };
 
-            let lines = new Chart(lineChart, config)
+    let lines = new Chart(lineChart, config)
                     
 }
 
     const createPieChar= ()=>{
         let pieChart= document.querySelector('.pieChart')
-        const data = {
+        const data = {//entire pie chart data
             labels: ['january', 'february','march', 'april'],
-            datasets: [{
+            datasets: [{//an array for subdata
             label: 'Test Data',
             backgroundColor: 'white',
             borderColor: 'green',
-            data: [0, 10, 5, 2, 20, 30, 45],
+            data: [40, 10, 5, 2],
             }]
         };
         
