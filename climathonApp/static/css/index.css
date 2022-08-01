@@ -310,7 +310,6 @@ ul#largeNav{
 .cont.trends-and-number{/*for the trends and analytics*/
     display: flex;
     justify-content: space-around;
-    width: 100%;
     padding: 4px;
     margin-top: 10%;
 }
@@ -320,9 +319,14 @@ ul#largeNav{
     height: 100%;
 }
 
-.line{
-    width:100%;
+.trends-and-number>*>*{/*all within trends and numbers cont are two conts holding canvas separately. Now I'm controlling the widht and height of each*/
+    width:30%;
     height: 100%;
+}
+
+.line{
+    width: 100%;
+    height:70%
 }
 
 /* enterprise satistics here (it's found in the "container" container)*/
