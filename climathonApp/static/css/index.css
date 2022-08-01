@@ -100,22 +100,39 @@ ul#largeNav{
 }
 .cont.topNav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
 }
-#leftIcon{/*hamburger div at top nav*/
+.cont.topNav>*{
+    margin: 3px;
+}
+#left-panel{/*the left panel in topNav*/
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    padding: 8px;
+}
+
+.eko-n-search{/*found within #left-panel*/
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-n-txt{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     width: fit-content;
-    padding: 8px;
-    cursor: pointer;
+    padding: 4px;
 }
-#leftIcon>*{
+.icon-n-txt>*{
     margin: 4px;
 }
+
 .licenced{
     width: 85px;
     padding: 5px;
@@ -135,7 +152,7 @@ ul#largeNav{
     bottom: 0;
     border-radius:20px;
     border: solid 1px #DEDEDE;
-    width:20%;
+    width:50%;
     height: fit-content;
     padding: 5px;
 }
@@ -307,21 +324,21 @@ ul#largeNav{
 #volume-num {
     color: black;
 }
-.cont.trends-and-number{/*for the trends and analytics*/
+.cont.trends-and-number{/*for the trends and analytics. Like other containers with the '.cont' className, its width is 100%*/
     display: flex;
     justify-content: space-around;
     padding: 4px;
     margin-top: 10%;
 }
-.trends-and-number >*{
+.trends-and-number >*{/*all trends containers in this container.*/
     margin: 5%;
-    width:50%;
-    height: 100%;
+    width:50% !important;
+    height: 100% !important;
 }
 
-.trends-and-number>*>*{/*all within trends and numbers cont are two conts holding canvas separately. Now I'm controlling the widht and height of each*/
-    width:30%;
-    height: 100%;
+.trends-and-number>.trends canvas{/*all within trends and numbers cont are two conts holding canvas separately. Now I'm controlling the widht and height of each*/
+    width:10%;
+    height: 10%;
 }
 
 .line{
@@ -396,6 +413,7 @@ ul#largeNav{
     align-items: center;
     text-align: center;
     margin: 5px;
+    padding: 8px;
 }
 
 .border-right{/*these are still the yieldTotal containers, but first and last, respectively, to give the demacating points*/
