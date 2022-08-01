@@ -31,7 +31,7 @@
         // setups
         const DATA_COUNT = 7;
         const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
-        childData= [20,80,100,200,300,500,800]
+        childData= [150,250,100,550,350,850,450]
         const labels = ['Ikeja', 'Abuja', 'EKEDC', 'EGBEDA', 'PHCN','PHASE 2', 'JOS ELECTRIC'];
 
         const data = {
@@ -39,7 +39,7 @@
         datasets: [//datasets (amount of data to create for this entire data)
             {
             label: 'Dataset 1',
-            data:[20,100,250,350,450,700,900],
+            data:[100,200,150,350,250,450,700],
             borderColor: 'red',
             backgroundColor: 'red',
             yAxisID: 'y',
@@ -103,25 +103,24 @@
     const createPieChar= ()=>{
         let pieChart= document.querySelector('.pieChart')
         const data = {//entire pie chart data
-            labels: ['january', 'february','march', 'april'],
+            title: 'Grid information around Lagos',
+            labels: ['january', 'february','march', 'april', 'May'],
             datasets: [//an array for subdata
                 {//first subdata/dataset
                 label: 'Agbado',
-                data: [{//data of first subdata (the smallest unit of datasets)
-                    data:20,
-                    backgroundColor:'green',
-                }, {
-                    data:40,
-                    backgroundColor:'red',
-                },
-                {
-                    data:60,
-                    backgroundColor:'yellow',
-                },
-                {
-                    data:80,
-                    backgroundColor:'brown',
-                }],
+                data: [60,30,40,90, 45],
+                backgroundColor:[
+                    '#FC9B2A',
+                    '#88EAFF',
+                    '#07631E',
+                    '#9F1616',
+                    '#F3DB02',
+                ],
+                borderColor:'white',
+                border:{
+                    outerWidth:'4px',
+                    style:'solid'
+                }
             },
             ]
         };
