@@ -7,7 +7,7 @@
 {%block content%}
 <div class="Dashboard">
     <div class="sideBarParent">
-        <div class="sideCont infoMaint">
+        <div class="sideCont infoMaint dash-txt">
             <i class="icon fa-solid fa-house-chimney-crack"></i>
             <h4 id="infoMainTxt"> Dashboard </h4>
         </div>
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div class="cont jointStockComp">
+        <!-- <div class="cont jointStockComp">
             <div class="companyProf-nd-info">
                 <img src="{%static 'img/internet_media_image.jpg'%}" alt="companyLogo" id="compLogo">
                 <div class="company-det">
@@ -75,36 +75,29 @@
             <div class="viewDet">
                 <h6 id="view-details">View Details </h6><i class="fa-regular fa-greater-than"></i>
             </div>
-        </div>
+        </div> -->
 
         <div class=" cont grid-total">
             <div class="gridInfo">
                 <div class="grid">
-                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="" id="gridImg">
+                    <i class="fa-solid fa-money-bill-1" id="gridImg"></i>
                     <div class="volumes">
-                        <h5 id="grid-volume">Total Volume <p id="unit">{pcs}</p></h5>
-                        <h1 id="volume-num">263,578</h1>
+                        <h5 id="grid-volume">Revenue</h5>
+                        <h5 id="volume-num">2,00,000</h5>
                     </div>
                 </div>
                 <div class="grid">
-                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="" id="gridImg">
+                    <i class="fa-solid fa-users" id="gridImg"></i>
                     <div class="volumes">
-                        <h5 id="grid-volume">Total Area <p id="unit">{pcs}</p></h5>
-                        <h1 id="volume-num">263,578</h1>
+                        <h5 id="grid-volume">Total User</h5>
+                        <h5 id="volume-num">1500</h5>
                     </div>
                 </div>
-                <div class="grid">
-                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="" id="gridImg">
+                <div class="grid grid-right">
+                    <i class="icon fa-solid fa-bolt-lightning" id="gridImg"></i>
                     <div class="volumes">
-                        <h5 id="grid-volume">Rental Services <p id="unit">{pcs}</p></h5>
-                        <h1 id="volume-num">263,578</h1>
-                    </div>
-                </div>
-                <div class="grid">
-                    <img src="{%static 'img/internet_media_image.jpg'%}" alt="" id="gridImg">
-                    <div class="volumes">
-                        <h5 id="grid-volume">City Delievery Service <p id="unit">{pcs}</p></h5>
-                        <h1 id="volume-num">263,578</h1>
+                        <h5 id="grid-volume">Total Yields</h5>
+                        <h5 id="volume-num">60000</h5>
                     </div>
                 </div>
             </div>
@@ -120,7 +113,11 @@
         </div>
 
         <div class="enterPrise-stat">
-
+            {%for i in list%}
+                <div class="card" style="text-align:center; border-radius: 10px;border: solid 2px black;">
+                    Card item Here for a test
+                </div>
+            {%endfor%}
         </div>
     </div>
 </div>

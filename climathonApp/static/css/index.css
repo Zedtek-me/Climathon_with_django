@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: montserrat;
+    font-family: 'inter';
 }
 
 body{
@@ -57,8 +57,8 @@ ul#largeNav{
     right: 30%;
     left: 0;
     bottom: -30;
-    background-color: rgb(18, 196, 18);
-    color: white;
+    background-color: #F7F7F7;
+    color: #B3BCB3;
     width: 20%;
     height: 100%;
     z-index: 100;
@@ -75,7 +75,9 @@ ul#largeNav{
     width: 50%;
     cursor: pointer;
 }
-
+.dash-txt{
+    color: black;
+}
 .icon{
     align-self: center !important; 
     width: 80% !important;
@@ -90,6 +92,7 @@ ul#largeNav{
 
 .icon:hover, #infoMainTxt:hover{
     font-weight: 700;
+    color:black
 }
 /* container--> counterpart of sidebar where other things including analytics go*/
 .container{
@@ -99,7 +102,6 @@ ul#largeNav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px black;
 }
 #leftIcon{/*hamburger div at top nav*/
     cursor: pointer;
@@ -108,6 +110,7 @@ ul#largeNav{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #B3BCB3;
 }
 #right-panel >*{
     display: flex;
@@ -115,6 +118,7 @@ ul#largeNav{
     align-items: center;
     margin: 5px;
     font-weight: 300 !important;
+    cursor: pointer;
 }
 #right-panel>*>*{
     margin: 2px;
@@ -124,6 +128,7 @@ ul#largeNav{
     justify-content: center;
     padding: 0px;
     margin-right:-25% !important;
+    color: black;
 }
 /* .img-n-name> *{
     
@@ -219,30 +224,56 @@ ul#largeNav{
 
 .gridInfo{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 5px;
+    background: #EAECEA;
 }
 .grid, #grid-volume{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left !important;
+    justify-self: flex-start;
+}
+
+.grid-right{/*grid meant to be aligned to the right in the gridInfo container; the first two go to the left side*/
+    justify-self: flex-end;
 }
 #unit{
     font-weight: 100;
 }
 .grid >*{
     margin: 8px;
+    font-size: 13px;
 }
 #gridImg{
-    width: 25%;height: 25%;
+    width: 85%;height: 80%;
+}
+.volumes{
+    color: #878B87;
+    border: solid 1px black;
+    width: 90px;
+    padding: 8px;
+}
+
+#volume-num {
+    color: black;
 }
 .cont.trends-and-number{/*for the trends and analytics*/
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 4px;
+    margin-top: 10%;
 }
 .trends-and-number >*{
     margin: 5%;
+    width:50%;
+    height: 100%;
+}
+
+.line{
+    width:100%;
+    height: 100%;
 }
