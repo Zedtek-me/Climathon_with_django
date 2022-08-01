@@ -112,7 +112,7 @@ ul#largeNav{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 80%;
     padding: 8px;
 }
 
@@ -152,7 +152,7 @@ ul#largeNav{
     bottom: 0;
     border-radius:20px;
     border: solid 1px #DEDEDE;
-    width:50%;
+    width:70%;
     height: fit-content;
     padding: 5px;
 }
@@ -174,6 +174,7 @@ ul#largeNav{
     justify-content: center;
     align-items: center;
     color: #B3BCB3;
+    width: 20%;
 }
 #right-panel >*{
     display: flex;
