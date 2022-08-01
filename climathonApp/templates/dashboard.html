@@ -35,6 +35,9 @@
             <div id="leftIcon">
                 <i class="fa-solid fa-bars"></i>
             </div>
+            <div class="search-cont">
+                <input type="search" name="searchCont" id="search">
+            </div>
             <div id="right-panel">
                 <div class="img-n-name">
                     <img src="{%static 'img/internet_media_image.jpg'%}" alt="user-img" id="user-img">
@@ -111,13 +114,80 @@
                 <canvas class=" trends numberOfCanvas pieChart"></canvas>
             </div>
         </div>
-
-        <div class="enterPrise-stat">
-            {%for i in list%}
-                <div class="card" style="text-align:center; border-radius: 10px;border: solid 2px black;">
-                    Card item Here for a test
+        <!-- for the cards below the graphs and charts -->
+        <div class="cont enterPrise-stat">
+            <div class="card">
+                <img src="{%static 'img/renew_img4.jpg'%}" alt="card-image" id="companyUseImg">
+                <div class="absolute-cardName">Company Name</div>
+                <div class="gridHealth">
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Total Yield</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Total Yield</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Health</p>
+                        <p id="numb">500mph</p>
+                    </div>
                 </div>
-            {%endfor%}
+            </div>
+            <div class="card">
+                <img src="{%static 'img/renew_img1.avif'%}" alt="card-image" id="companyUseImg">
+                <div class="absolute-cardName">Company Name</div>
+                <div class="gridHealth">
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Total Yield</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Total Yield</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Health</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{%static 'img/renew_img2.jpg'%}" alt="card-image" id="companyUseImg">
+                <div class="absolute-cardName">Company Name</div>
+                <div class="gridHealth">
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Total Yield</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Total Yield</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Health</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{%static 'img/renew_img3.jpg'%}" alt="card-image" id="companyUseImg">
+                <div class="absolute-cardName">Company Name</div>
+                <div class="gridHealth">
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Total Yield</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Total Yield</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                    <div class="yieldTotal">
+                        <p id="totalTxt">Health</p>
+                        <p id="numb">500mph</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

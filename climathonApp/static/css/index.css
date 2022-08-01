@@ -59,7 +59,7 @@ ul#largeNav{
     bottom: -30;
     background-color: #F7F7F7;
     color: #B3BCB3;
-    width: 20%;
+    width: 15%;
     height: 100%;
     z-index: 100;
 }
@@ -95,8 +95,8 @@ ul#largeNav{
     color:black
 }
 /* container--> counterpart of sidebar where other things including analytics go*/
-.container{
-    width:80%;
+.container{/*found after the sidebar container*/
+    width:85%;
 }
 .cont.topNav{
     display: flex;
@@ -139,9 +139,9 @@ ul#largeNav{
     height: 10%;
     margin-right: -70%;
 }
-.cont, .cont.topNav{
+.cont{
     width: 100%;
-    transform: translateX(12%);
+    transform: translateX(8%);
     height: 50%;
     margin: 5px;
     padding: 8px ;
@@ -224,21 +224,22 @@ ul#largeNav{
 
 .gridInfo{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 5px;
     background: #EAECEA;
 }
-.grid, #grid-volume{
+.grid{/*grids in gridInfo (3 in number)*/
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: left !important;
-    justify-self: flex-start;
 }
 
-.grid-right{/*grid meant to be aligned to the right in the gridInfo container; the first two go to the left side*/
-    justify-self: flex-end;
+
+.grid.grid-right{/*grid meant to be aligned to the right in the gridInfo container; the first two go to the left side*/
+    justify-self: flex-end !important;
+    float: right;
 }
 #unit{
     font-weight: 100;
@@ -247,12 +248,12 @@ ul#largeNav{
     margin: 8px;
     font-size: 13px;
 }
-#gridImg{
-    width: 85%;height: 80%;
+#gridImg{/*icons in grid*/
+    width: 85%;
+    height: 80%;
 }
-.volumes{
+.volumes{/*volume containers in grid*/
     color: #878B87;
-    border: solid 1px black;
     width: 90px;
     padding: 8px;
 }
@@ -276,4 +277,53 @@ ul#largeNav{
 .line{
     width:100%;
     height: 100%;
+}
+
+/* enterprise satistics here (it's found in the "container" container)*/
+.enterPrise-stat{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+ .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    width: 100%;
+}
+
+.card{
+    width:30%;
+}
+.card>*{
+    width: 100%;
+    height:50%;
+}
+.absolute-cardName{/*to be absoluted within the enterprise-stat as the name of each enterprise/company*/
+    display: flex;
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    right: 20%;
+    bottom: 30%;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    width: fit-content;
+    padding: 8px;
+    text-align: left;
+}
+
+.gridHealth{/*the gridHealth containers within the enterprise-stat*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
