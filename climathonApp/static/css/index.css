@@ -102,6 +102,7 @@ ul#largeNav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 #leftIcon{/*hamburger div at top nav*/
     display: flex;
@@ -122,6 +123,34 @@ ul#largeNav{
     color:white ;
     background-color: #42B04B;
     text-align: center;
+}
+.search-cont{/*parent container for the search icon and search element*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius:20px;
+    border: solid 1px #DEDEDE;
+    width:20%;
+    height: fit-content;
+    padding: 5px;
+}
+#absolute-mag{
+    position: absolute;
+    top: 20;
+    right: 80%;
+    left: 2%;
+    bottom: 5;
+    justify-self: flex-start !important;
+}
+#search, #search:focus{/*search element itself*/
+    border:none !important;
+    width: 100%;
+    height: 100%;
 }
 #right-panel{/*th right panel to hamburger div at the top nav*/
     display: flex;
