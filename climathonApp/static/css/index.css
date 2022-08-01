@@ -376,7 +376,7 @@ ul#largeNav{
 
 .gridHealth{/*the gridHealth containers within the enterprise-stat*/
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: left;
     text-align: center;
     background-color: white;
