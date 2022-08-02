@@ -74,6 +74,7 @@ ul#largeNav{
     margin: 20%;
     width: 50%;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 .dash-txt{
     color: black;
@@ -82,15 +83,13 @@ ul#largeNav{
     align-self: center !important; 
     width: 80% !important;
     height: 80% !important;
-    transition: all 0.3s ease;
 }
 
 #infoMainTxt{
-    transition: all 0.3s ease;
     font-weight: 400;
 }
 
-.icon:hover, #infoMainTxt:hover{
+.sideCont:hover{
     font-weight: 700;
     color:black
 }
@@ -168,6 +167,8 @@ ul#largeNav{
     border:none !important;
     width: 100%;
     height: 100%;
+    outline: none !important;
+    text-align: center;
 }
 #right-panel{/*th right panel to hamburger div at the top nav*/
     display: flex;
