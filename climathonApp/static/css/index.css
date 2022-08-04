@@ -272,13 +272,14 @@
     width: 100%;
 }
 
-.trends{
+.trends{/*actual canvas containers*/
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
 }
 
-.line, .pieChart{
-    width: 50%;
+.line, .pieChart{/*canvas themselves*/
+    width: 30px;
+    height: 30px
 }
