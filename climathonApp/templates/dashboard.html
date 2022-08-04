@@ -5,32 +5,8 @@
 
 
 {%block content%}
-<div class="Dashboard">
-    <div class="sideBarParent">
-        <div class="sideCont infoMaint dash-txt">
-            <i class="icon fa-solid fa-house-chimney-crack"></i>
-            <h4 id="infoMainTxt"> Dashboard </h4>
-        </div>
-        <div class="sideCont infoMaint">
-            <i class="icon fa-solid fa-chart-line"></i>
-            <h4 id="infoMainTxt"> Analytics </h4>
-        </div>
-        <div class="sideCont infoMaint">
-            <i class="icon fa-solid fa-bolt-lightning"></i>
-            <h4 id="infoMainTxt"> Lightening</h4>
-        </div>
-        <div class="sideCont infoMaint">
-            <i class="icon fa-solid fa-battery-empty"></i>
-            <h4 id="infoMainTxt"> Batteries </h4>
-        </div>
-        <div class="sideCont infoMaint">
-            <i class="icon fa-solid fa-gears"></i>
-            <h4 id="infoMainTxt">Settings</h4>
-        </div> 
-    </div>
-
     <!-- {/*Parent container for analytics and other info */} -->
-    <div class="container analytics">
+    <div class="container">
         <div class=" cont topNav">
             <div id="left-panel">
                 <div class="eko-n-search">
@@ -38,10 +14,10 @@
                         <i class="fa-solid fa-bars"></i>
                         <h3 id="eko-desc">Eko Climate Hackerz</h3>
                     </div>
-                    <div class="licenced">Licenced</div>
+                    <div class="licensed">Licensed</div>
                     <div class="search-cont">
                         <i class="fa-solid fa-magnifying-glass" id="absolute-mag"></i>
-                        <input type="search" name="searchCont" id="search">
+                        <input type="search" name="searchCont" id="search" placeholder="Type a search">
                     </div>
                 </div>
             </div>
@@ -60,173 +36,181 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="cont jointStockComp">
-            <div class="companyProf-nd-info">
-                <img src="{%static 'img/internet_media_image.jpg'%}" alt="companyLogo" id="compLogo">
-                <div class="company-det">
-                    <div class="compType-nd-stars">
-                        <h6 id="companyType">Ikeja Electric Limited</h6>
-                        <div class="stars">
-                            <i class="star fa-regular fa-star"></i>
-                            <i class="star fa-regular fa-star"></i>
-                            <i class="star fa-regular fa-star"></i>
-                            <i class="star fa-regular fa-star"></i>
-                            <i class="star fa-regular fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="btns">
-                        <h6 id="member" class="round-radi">Member</h6>
-                        <h6 id="non-certif" class="round-radi">Non-certified</h6>
-                        <h6 id="apply" class="round-radi">Apply</h6>
-                    </div>
+        <!-- side container -->
+        <div class="Dashboard">
+            <div class="sideBarParent">
+                <div class="sideCont infoMaint dash-txt">
+                    <i class="fa-light fa-grid-horizontal"></i>
+                    <h4 id="infoMainTxt"> Dashboard </h4>
                 </div>
-            </div>
-            <div class="viewDet">
-                <h6 id="view-details">View Details </h6><i class="fa-regular fa-greater-than"></i>
-            </div>
-        </div> -->
-
-        <div class=" cont grid-total">
-            <div class="gridInfo">
-                <div class="grid">
-                    <i class="vol-icon fa-solid fa-money-bill-1" id="gridImg"></i>
-                    <div class="volumes">
-                        <h5 id="grid-volume">Revenue</h5>
-                        <h5 id="volume-num">2,00,000</h5>
-                    </div>
+                <div class="sideCont infoMaint">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <h4 id="infoMainTxt"> Analytics </h4>
                 </div>
-                <div class="grid control-align">
-                    <i class="vol-icon fa-solid fa-users" id="gridImg"></i>
-                    <div class="volumes">
-                        <h5 id="grid-volume">Total User</h5>
-                        <h5 id="volume-num">1500</h5>
-                    </div>
+                <div class="sideCont infoMaint">
+                    <i class="icon fa-solid fa-bolt-lightning"></i>
+                    <h4 id="infoMainTxt"> Lightening</h4>
                 </div>
-                <div class="grid grid-right">
-                    <i class="vol-icon fa-solid fa-bolt-lightning" id="gridImg"></i>
-                    <div class="volumes">
-                        <h5 id="grid-volume">Total Yields</h5>
-                        <h5 id="volume-num">60000</h5>
-                    </div>
+                <div class="sideCont infoMaint">
+                    <i class="icon fa-solid fa-battery-empty"></i>
+                    <h4 id="infoMainTxt"> Batteries </h4>
                 </div>
+                <div class="sideCont infoMaint">
+                    <i class="icon fa-solid fa-gears"></i>
+                    <h4 id="infoMainTxt">Settings</h4>
+                </div> 
             </div>
         </div>
-
-        <div class="cont trends-and-number">
-            <div class="trends forLine">
-                <canvas class="trends trendsCanvas line"></canvas>
-            </div>
-            <div class="trends forPie">
-                <canvas class=" trends numberOfCanvas pieChart"></canvas>
-            </div>
-        </div>
-        <!-- for the cards below the graphs and charts -->
-        <div class="cont enterPrise-stat">
-            <div class="card">
-                <img src="{%static 'img/renew_img4.jpg'%}" alt="card-image" id="companyUseImg">
-                <div class="absolute-cardName">Ijebu Grid</div>
-                <div class="gridHealth">
-                    <div class="yieldTotal border-right">
-                        <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
+        <!-- combined gridTotal and enterprise, formally separated -->
+        <div class="grid-nd-ent">
+            <div class=" cont grid-total">
+                <div class="gridInfo">
+                    <div class="grid">
+                        <i class="vol-icon fa-solid fa-money-bill-1" id="gridImg"></i>
+                        <div class="volumes">
+                            <h5 id="grid-volume">Revenue</h5>
+                            <h5 id="volume-num">2,00,000</h5>
                         </div>
                     </div>
-                    <div class="yieldTotal">
-                        <i class="fa-thin fa-battery-bolt" id="total-bat"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
+                    <div class="grid control-align">
+                        <i class="vol-icon fa-solid fa-users" id="gridImg"></i>
+                        <div class="volumes">
+                            <h5 id="grid-volume">Total User</h5>
+                            <h5 id="volume-num">1500</h5>
                         </div>
                     </div>
-                    <div class="yieldTotal border-left">
-                        <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
+                    <div class="grid grid-right">
+                        <i class="vol-icon fa-solid fa-bolt-lightning" id="gridImg"></i>
+                        <div class="volumes">
+                            <h5 id="grid-volume">Total Yields</h5>
+                            <h5 id="volume-num">60000</h5>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="{%static 'img/renew_img1.avif'%}" alt="card-image" id="companyUseImg">
-                <div class="absolute-cardName">Lagos Grid</div>
-                <div class="gridHealth">
-                    <div class="yieldTotal border-right">
-                        <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
-                        </div>
+            
+            <!-- for the cards below the graphs and charts -->
+            <div class="cont enterPrise-stat">
+                <!-- for the canvas that hold the graphs and charts-->
+                <div class="cont trends-and-number">
+                    <div class="trends forLine">
+                        <canvas class="trendsCanvas line"></canvas>
                     </div>
-                    <div class="yieldTotal">
-                        <i class="fa-thin fa-battery-bolt" id="total-bat"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
-                        </div>
-                    </div>
-                    <div class="yieldTotal border-left">
-                        <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
-                        </div>
+                    <div class="trends forPie">
+                        <canvas class="numberOfCanvas pieChart"></canvas>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="{%static 'img/renew_img2.jpg'%}" alt="card-image" id="companyUseImg">
-                <div class="absolute-cardName">Abuja Grid</div>
-                <div class="gridHealth">
-                    <div class="yieldTotal border-right">
-                        <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
-                        </div>
-                    </div>
-                    <div class="yieldTotal">
-                        <i class="fa-thin fa-battery-bolt" id="total-bat"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
-                        </div>
-                    </div>
-                    <div class="yieldTotal border-left">
-                        <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
-                        </div>
-                    </div>
+                <div class="standaloneIcons"><!--for icons after the graph and chart-->
+                    <i class="fa-light fa-cloud-fog"></i>
+                    <i class="fa-regular fa-battery-bolt transform-bat"></i>
                 </div>
-            </div>
-            <div class="card">
-                <img src="{%static 'img/renew_img3.jpg'%}" alt="card-image" id="companyUseImg">
-                <div class="absolute-cardName">Sango Grid</div>
-                <div class="gridHealth">
-                    <div class="yieldTotal border-right">
-                        <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="{%static 'img/renew_img4.jpg'%}" alt="card-image" id="companyUseImg">
+                        <div class="absolute-cardName">Ijebu Grid</div>
+                        <div class="gridHealth">
+                            <div class="yieldTotal border-right">
+                                <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                            <div class="yieldTotal">
+                                <i class="fa-thin fa-battery-bolt" id="total-bat"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                            <div class="yieldTotal border-left">
+                                <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="yieldTotal">
-                        <i class="fa-thin fa-battery-bolt" id="total-bat"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
+                    <div class="card">
+                        <img src="{%static 'img/renew_img1.avif'%}" alt="card-image" id="companyUseImg">
+                        <div class="absolute-cardName">Lagos Grid</div>
+                        <div class="gridHealth">
+                            <div class="yieldTotal border-right">
+                                <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                            <div class="yieldTotal">
+                                <i class="fa-thin fa-battery-bolt" id="total-bat"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                            <div class="yieldTotal border-left">
+                                <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="yieldTotal border-left">
-                        <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
-                        <div class="total-txt-cont">
-                            <p id="totalTxt">Total Yield</p>
-                            <p id="numb">500mph</p>
+                    <div class="card">
+                        <img src="{%static 'img/renew_img2.jpg'%}" alt="card-image" id="companyUseImg">
+                        <div class="absolute-cardName">Abuja Grid</div>
+                        <div class="gridHealth">
+                            <div class="yieldTotal border-right">
+                                <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                            <div class="yieldTotal">
+                                <i class="fa-thin fa-battery-bolt" id="total-bat"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                            <div class="yieldTotal border-left">
+                                <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{%static 'img/renew_img3.jpg'%}" alt="card-image" id="companyUseImg">
+                        <div class="absolute-cardName">Sango Grid</div>
+                        <div class="gridHealth">
+                            <div class="yieldTotal border-right">
+                                <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                            <div class="yieldTotal">
+                                <i class="fa-thin fa-battery-bolt" id="total-bat"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
+                            <div class="yieldTotal border-left">
+                                <i class="vol-icon fa-solid fa-bolt-lightning" id="total-icon"></i>
+                                <div class="total-txt-cont">
+                                    <p id="totalTxt">Total Yield</p>
+                                    <p id="numb">500mph</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ const handleAUth= async (e)=>{
             method:'POST',
             body:JSON.stringify(dataForm)
         })
-        let data = await data.json()
+        let data = await resp.json()
         if (data.status_code ==='200'){
             // successful login
             flash.textContent= 'Login Successful'
