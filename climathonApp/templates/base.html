@@ -31,15 +31,15 @@
         // setups
         const DATA_COUNT = 7;
         const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
-        childData= [150,250,100,550,350,850,450]
-        const labels = ['Ikeja', 'Abuja', 'EKEDC', 'EGBEDA', 'PHCN','PHASE 2', 'JOS ELECTRIC'];
+        childData= [150,250,100,550,350,850,450, 950, 550]
+        const labels = ['january', 'february','march', 'april', 'May', 'June, July'];
 
         const data = {
         labels: labels,
         datasets: [//datasets (amount of data to create for this entire data)
             {
             label: 'Grid',
-            data:[100,200,150,350,250,450,700],
+            data:[100,200,150,350,250,450,700, 500, 800],
             borderColor: 'red',
             backgroundColor: 'red',
             yAxisID: 'y',
@@ -104,17 +104,16 @@
         let pieChart= document.querySelector('.pieChart')
         const data = {//entire pie chart data
             title: 'Grid information around Lagos',
-            labels: ['january', 'february','march', 'april', 'May'],
+            labels: ['Yaba', 'Akoka', 'Maryland', 'Bariga'],
             datasets: [//an array for subdata
                 {//first subdata/dataset
                 label: 'Agbado',
-                data: [60,30,40,90, 45],
+                data: [60,30,40,90],
                 backgroundColor:[
-                    '#FC9B2A',
-                    '#88EAFF',
                     '#07631E',
                     '#9F1616',
-                    '#F3DB02',
+                    '#A45F2D',
+                    '#6F0E9C',
                 ],
                 outerWidth:"20px",
                 outerHeight:"30px",
@@ -132,6 +131,7 @@
             data: data,
             options: {
                 legend:{
+                    display:true, 
                     position: 'bottom',
                 }
             }

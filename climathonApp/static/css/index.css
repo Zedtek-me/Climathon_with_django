@@ -124,6 +124,8 @@
     z-index: 100;
     padding-left: 25px;
 }
+
+
 .sideBarparent{/*the only thing within the Dashboard; this has several extra divs within it, for navs*/
     display: flex;
     flex-direction: column;
@@ -142,6 +144,13 @@
 
 .sideCont:hover{
     color:black
+}
+.sideCont.dash-txt{
+    color: black;
+}
+
+#total-icon{
+    color: #42B04B;
 }
 /* the next container inside container, where other things go */
 .grid-nd-ent{
@@ -280,11 +289,12 @@
     height: 100%;
 }
 
-.line, .pieChart{/*canvas themselves*/
-    width: 60% !important;
+.pieChart{/*canvas themselves*/
+    width: 80% !important;
     height: 100% !important;
 }
 
 .line{
     height: 400px !important;
+    width: 60% !important;
 }
