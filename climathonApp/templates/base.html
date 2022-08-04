@@ -130,7 +130,11 @@
         const config = {
             type: 'pie',
             data: data,
-            options: {}
+            options: {
+                legend:{
+                    position: 'bottom',
+                }
+            }
         };
         
         let chart = new Chart(pieChart, config)
