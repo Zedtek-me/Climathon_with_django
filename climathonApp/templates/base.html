@@ -62,41 +62,46 @@
         type: 'line',
         data: data,
         options: {
-        responsive: true,
-        interaction: {
-        mode: 'index',
-        intersect: false,
-        },
-        stacked: false,
-        plugins: {
-        title: {
-            display: true,
-            text: 'Overall Grid Wattage',
-        }
-        },
-        scales: {
-        y: {
-            type: 'linear',
-            display: true,
-            position: 'left',
-            min: 10,
-            max:1000
-        },
-        y1: {
-            type: 'linear',
-            display: true,
-            position: 'right',
-            min: 10,
-            max:1000,
-
-            // grid line settings
-            grid: {
-            drawOnChartArea: false, // only want the grid lines for one axis to show up
+            responsive: true,
+            interaction: {
+                mode: 'index',
+                intersect: false,
+                },
+            stacked: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Overall Grid Wattage',
+                    display:true,
+                    text: 'Grid information around Lagos',
+                    color: '#42B04B',
+                    align: 'left',
+                    font: 'inter',
+                }
             },
+            scales: {
+            y: {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                min: 10,
+                max:1000
+            },
+            y1: {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                min: 10,
+                max:1000,
+
+                // grid line settings
+                grid: {
+                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                },
+            },
+            }
         },
-        }
-    },
-};
+    };
 
     let lines = new Chart(lineChart, config)
                     
@@ -105,7 +110,6 @@
     const createPieChar= ()=>{
         let pieChart= document.querySelector('.pieChart')
         const data = {//entire pie chart data
-            title: 'Grid information around Lagos',
             labels: ['Yaba', 'Akoka', 'Maryland', 'Bariga'],
             datasets: [//an array for subdata
                 {//first subdata/dataset
@@ -135,8 +139,18 @@
                 legend:{
                     display:true, 
                     position: 'bottom',
-                }
+                },
+                plugins:{
+                    title: {
+                        display:true,
+                        text: 'Grid information around Lagos',
+                        color: '#42B04B',
+                        align: 'left',
+                        fullSize: false,
+                    },
             }
+            },
+            
         };
         
         let chart = new Chart(pieChart, config)
