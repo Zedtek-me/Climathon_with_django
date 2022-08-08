@@ -2,15 +2,22 @@
 {%block title%}Register{%endblock%}
 
 {%block content%}
+<div class="parent-form-cont-with-bg">
+    <div class="for-opac"></div>
     <div class="formCont register-cont">
+        <p id="start-txt">START FOR FREE</p>
+        <h1 id="create-new-acc-txt">Create New Account</h1>
+        <P id="headsup">Already a Member? <a href="{%url 'login'%}" id="form-anch">Login</a></P>
         <form id="signupForm" method="post" onsubmit="handleAuth()">
             {%csrf_token%}
-            <input type="text" name="name" id="name" placeholder="Name" required>
-            <input type="text" name="username" id="username" placeholder="Username" required>
+            <div class="names">
+                <input type="text" name="firtsname" id="firstname" placeholder="First Name" required>
+                <input type="text" name="lastname" id="lastname" placeholder="Last name" required>
+            </div>
             <input type="email" name="email" id="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Register</button>
         </form>
-        <P id="headsup">Already have an account? <a href="{%url 'login'%}">Login</a></P>
     </div>
+</div>
 {%endblock%}

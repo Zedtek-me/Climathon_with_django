@@ -4,6 +4,12 @@
     margin: 0px;
     text-align: center;
 }
+
+.whole-body{
+    width: 99.5%;
+    height: 100vh;
+    padding: 3px;
+}
 .container{
     display: flex;
     flex-direction: column;
