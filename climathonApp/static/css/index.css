@@ -1,5 +1,5 @@
 *{
-    font-family: 'inter';
+    font-family: 'inter' !important;
     box-sizing: border-box;
     margin: 0px;
     text-align: center;
@@ -70,6 +70,12 @@
 }
 .icon-n-txt>*{/*Eko Climate Hackerz text*/
     margin: 2px;
+}
+
+.icon-n-txt img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 }
 
 .search-cont{
