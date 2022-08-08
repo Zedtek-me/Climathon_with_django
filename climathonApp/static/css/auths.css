@@ -56,7 +56,7 @@
 }
 #form-anch{
     text-decoration: none;
-    color: blue;
+    color: rgb(80, 119, 226);
 }/*ends here*/
 
 .names{/*holding two inputs for 'name' and 'last name'*/
